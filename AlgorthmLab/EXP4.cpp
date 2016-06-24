@@ -12,7 +12,7 @@ void EXP4()
 			temp[i][j] = cnt++;
 		}
 	}
-	
+
 	srand(time(0));
 	for (int t = 0;t < 100;++t)
 	{
@@ -22,7 +22,7 @@ void EXP4()
 		int h = rand() % 3;
 		swap(temp[i][j], temp[k][h]);
 	}
-	
+
 	cout << "³õÊ¼×´Ì¬£º" << endl;
 	Maze maze(temp);
 	maze.print();

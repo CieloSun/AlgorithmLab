@@ -59,7 +59,7 @@ void EXP3_Prime() {
 	}
 	cout << "请输入节点的个数" << endl;
 	cin >> V;
-	
+
 	cout << "请依次输入每条边的起点，终点和边权，输入三个0结束输入" << endl;
 	while (true)
 	{

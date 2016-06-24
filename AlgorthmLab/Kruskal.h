@@ -94,7 +94,7 @@ void EXP3_Kruskal() {
 	{
 		Edge tmp;
 		cin >> tmp.from >> tmp.to >> tmp.weight;
-		if (!(tmp.from|tmp.to|tmp.weight))
+		if (!(tmp.from | tmp.to | tmp.weight))
 		{
 			break;
 		}

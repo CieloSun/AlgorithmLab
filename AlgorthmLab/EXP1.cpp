@@ -3,6 +3,8 @@
 #include <random>
 #include "QuickSort.h"
 #include "InsertSort.h"
+#include "BubbleSort.h"//最终没有使用
+#include "SelectionSort.h"//最终没有使用
 
 int intarray[1000000];
 int intarray2[1000000];
@@ -10,7 +12,7 @@ double doublearray[1000000];
 double doublearray2[1000000];
 
 
-template<class T> void test(T* testArray,T* testArrayCopy)
+template<class T> void test(T* testArray, T* testArrayCopy)
 {
 	std::default_random_engine engine((unsigned int)time(NULL));
 	std::uniform_real_distribution<double> distribution(0, 100000);
@@ -28,7 +30,7 @@ template<class T> void test(T* testArray,T* testArrayCopy)
 		startTime = clock();
 		QuickSort(testArrayCopy, 0, length);
 		endTime = clock();
-		printf("%s%f\n", "Quick Sort:",(endTime - startTime) / 1000);
+		printf("%s%f\n", "Quick Sort:", (endTime - startTime) / 1000);
 	}
 }
 
@@ -39,3 +41,4 @@ void EXP1()
 	printf("%s\n", "Test the float array:");
 	test(doublearray, doublearray2);
 }
+

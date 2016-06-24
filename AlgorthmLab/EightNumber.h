@@ -135,7 +135,7 @@ int dfs(Maze maze)
 	if (maze.success()) return 0;
 	else
 	{
-		if ((maze.left() || maze.up() || maze.right() || maze.down())&& find(visited.begin(), visited.end(), maze) == visited.end())
+		if ((maze.left() || maze.up() || maze.right() || maze.down()) && find(visited.begin(), visited.end(), maze) == visited.end())
 		{
 			visited.push_back(maze);
 			return 1 + dfs(maze);

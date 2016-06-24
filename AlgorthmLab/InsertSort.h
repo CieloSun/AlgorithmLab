@@ -13,7 +13,7 @@ template<class T> void insertSort(T* A, long long length)
 		int key = A[j];
 		//Insert A[j] into the sorted sequence A[0,...j-1]
 		long long i = j - 1;
-		while (i >= 0 && A[i]>key)
+		while (i >= 0 && A[i] > key)
 		{
 			A[i + 1] = A[i];
 			i--;

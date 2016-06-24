@@ -147,7 +147,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClInclude Include="BubbleSort.h" />
-    <ClInclude Include="DepthFirstSearch.h" />
+    <ClInclude Include="BacktrackKnapsack.h" />
     <ClInclude Include="EightNumber.h" />
     <ClInclude Include="DP-shortestPath.h" />
     <ClInclude Include="GreedyKnapsack.h" />
