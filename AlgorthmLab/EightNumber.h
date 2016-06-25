@@ -130,16 +130,30 @@ public:
 };
 int dfs(Maze maze)
 {
-	vector<Maze> visited;
-	visited.clear();
-	if (maze.success()) return 0;
-	else
+	vector<Maze> v;
+	int d = 0;//0down,1left,2right,3up
+	srand(time(0));
+	while (!maze.success())
 	{
-		if ((maze.left() || maze.up() || maze.right() || maze.down()) && find(visited.begin(), visited.end(), maze) == visited.end())
+		Maze tmp = maze;
+		d = (d + 1) % 4;
+		switch (d)
 		{
-			visited.push_back(maze);
-			return 1 + dfs(maze);
+		case 0:
+			maze.down() || maze.left() || maze.right() || maze.up();break;
+		case 1:
+			maze.left() || maze.down() || maze.right() || maze.up();break;
+		case 2:
+			maze.right() || maze.down() || maze.left() || maze.up();break;
+		case 3:
+			maze.up() || maze.down() || maze.left() || maze.right();break;
 		}
+		if (std::find(v.begin(), v.end(), maze) == v.end())
+		{
+			v.push_back(maze);
+			maze.print();
+		}
+		else maze = tmp;
 	}
 }
 int bfs(Maze maze)
