@@ -131,8 +131,8 @@ public:
 int dfs(Maze maze)
 {
 	vector<Maze> v;
+	int cnt = 0;
 	int d = 0;//0down,1left,2right,3up
-	srand(time(0));
 	while (!maze.success())
 	{
 		Maze tmp = maze;
@@ -152,9 +152,11 @@ int dfs(Maze maze)
 		{
 			v.push_back(maze);
 			maze.print();
+			cnt++;
 		}
 		else maze = tmp;
 	}
+	return cnt;
 }
 int bfs(Maze maze)
 {
@@ -209,7 +211,7 @@ int bestFirst(Maze maze)
 		Maze temp = pq.top();pq.pop();
 		visited.push_back(temp);
 		cnt++;
-		temp.print();
+		//temp.print();
 		if (temp.success())
 		{
 			cout << "Success!" << endl;

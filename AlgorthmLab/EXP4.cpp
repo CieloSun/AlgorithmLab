@@ -30,3 +30,10 @@ void EXP4()
 	//cout << bfs(temp) << endl;
 	//cout << dfs(maze) << endl;
 }
+
+int main()
+{
+	//请选择生成01背包数据还是完全背包数据（输入1则为01背包，输入0则为完全背包)
+	//dataproduct(1);
+	EXP4();
+}
